@@ -10,7 +10,7 @@ function timeToGo(s) {
 
 
   out = '';
-  out += diff.getHours() + " hours, ";
+  out += (diff.getHours() - 1) + " hours, ";
   out += diff.getMinutes() + " minutes, "
   out += diff.getSeconds() + " seconds"
 
