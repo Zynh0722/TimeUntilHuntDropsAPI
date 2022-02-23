@@ -10,7 +10,7 @@ function timeToGo(s) {
 
 
   out = '';
-  out += (diff.getHours() - 1) + " hours, ";
+  out += (diff.getHours()) + " hours, ";
   out += diff.getMinutes() + " minutes, "
   out += diff.getSeconds() + " seconds"
 
@@ -19,8 +19,13 @@ function timeToGo(s) {
 }
 
 app.get('/', (req, res) => {
-  let dropsTime = new Date('2022-02-23T16:00:00+0000');
+  let dropsTime = new Date('2022-02-23T15:00:00+0000');
 
+  res.send('Hunt Drops in: ' + timeToGo(dropsTime));
+});
+
+app.get('/no-title', (req, res) => {
+  let dropsTime = new Date('2022-02-23T15:00:00+0000');
 
   res.send('Hunt Drops in: ' + timeToGo(dropsTime));
 });
