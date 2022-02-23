@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 app.get('/no-title', (req, res) => {
   let dropsTime = new Date('2022-02-23T15:00:00+0000');
 
-  res.send('Hunt Drops in: ' + timeToGo(dropsTime));
+  res.send(timeToGo(dropsTime));
 });
 
 app.listen(PORT, () => {
